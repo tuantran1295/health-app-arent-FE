@@ -34,7 +34,12 @@ function Header() {
                     </div>
                     <div className="inline-flex text-light hover:text-primary-400 cursor-pointer mr-4">
                         <img className="h-[32px] w-[32px]" src={Challenge}/>
-                        <span className="lg:block hidden ml-3">チャレンジ</span>
+                        <NavLink
+                            to="/column"
+                            className={({isActive}) => (isActive ? "text-primary-400 ml-3 lg:block hidden" : "ml-3 lg:block hidden")}
+                        >
+                            <span className="lg:block hidden ml-3">チャレンジ</span>
+                        </NavLink>
                     </div>
                     <div className="inline-flex text-light hover:text-primary-400 cursor-pointer mr-4">
                         <NoticeNumber number={NUMBER}>

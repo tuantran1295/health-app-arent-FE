@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -21,11 +22,13 @@ export default {
           400: '#777777',
         },
       },
-    },
-    fontFamily: {
-      noto: ['Noto Sans JP', 'sans-serif'],
-      inter: ['Inter', 'sans-serif'],
+      fontFamily: {
+        noto: ['Noto Sans JP', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
 };
+
+export default config;
