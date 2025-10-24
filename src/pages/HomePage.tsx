@@ -3,16 +3,21 @@ import FoodInfo from '../components/FoodInfo'
 import {categories, meal} from "../mock/foods.ts";
 import HexagonButton from "../components/HexagonButton.tsx";
 import LinearButton from "../components/LinearButton.tsx";
+import Chart from "../components/Chart.tsx";
+import Layout from "../layout";
 
 function HomePage() {
     const [expand, setExpand] = useState<boolean>(false)
     const [active, setActive] = useState<string>('all')
     return (
-        <div>
-            <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between'>
-                {categories.map(e => (
-                    <HexagonButton onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name}/>
-                ))}
+        <Layout>
+            <div>
+                <Chart/>
+                <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between'>
+                    {categories.map(e => (
+                        <HexagonButton onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name}/>
+                    ))}
+                </div>
                 <div className='lg:w-[960px] w-full mt-[50px] flex flex-col md:px-0 px-4 items-center mx-auto'>
                     <div className='gap-[6px] grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3'>
                         {meal.filter(el => active !== 'all' ? el.category == active : true).slice(0, expand ? meal.length : 8).map(e => (
@@ -26,7 +31,7 @@ function HomePage() {
                     )}
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 
