@@ -8,7 +8,7 @@ function Column() {
         <Layout>
             <div className="Column">
                 <div
-                    className="flex justify-around w-4/6 py-12"
+                    className="flex justify-around w-4/6 py-12 flex-wrap"
                     style={{ margin: "0 auto" }}
                 >
                     <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
@@ -17,7 +17,7 @@ function Column() {
                     <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
                 </div>
                 <div
-                    className="flex justify-around w-4/6 pb-20"
+                    className="flex justify-around w-4/6 pb-20 flex-wrap"
                     style={{ margin: "0 auto" }}
                 >
                     <ColumnThumbnail
@@ -42,7 +42,7 @@ function Column() {
                     />
                 </div>
                 <div
-                    className="flex justify-around w-4/6 pb-20"
+                    className="flex justify-around w-4/6 pb-20 flex-wrap"
                     style={{ margin: "0 auto" }}
                 >
                     <ColumnThumbnail
