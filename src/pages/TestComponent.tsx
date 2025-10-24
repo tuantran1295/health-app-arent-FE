@@ -3,6 +3,7 @@ import LinearButton from "../components/LinearButton.tsx";
 import RecordCategory from "../components/RecordCategory.tsx";
 import ColumnThumbnail from "../components/ColumnThumbnail.tsx";
 import RecommendColumn from "../components/RecommendColumn.tsx";
+import MyDiary from "../components/MyDiary.tsx";
 
 function TestComponent() {
     return (
@@ -52,8 +53,20 @@ function TestComponent() {
                     type="4"
                 />
             </div>
-            <br></br><br></br><br></br><br></br><br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
+            <br></br>
+            <br></br>
+            <MyDiary
+                date="2021.05.21"
+                time="23:25"
+                content="私の日記の記録が一部表示されます。
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"
+            />
         </div>
     );
 }

@@ -9,16 +9,16 @@ function Column() {
             <div className="Column">
                 <div
                     className="flex justify-around w-4/6 py-12 flex-wrap"
-                    style={{ margin: "0 auto" }}
+                    style={{margin: "0 auto"}}
                 >
-                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
-                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
-                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
-                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ" />
+                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
+                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
+                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
+                    <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
                 </div>
                 <div
                     className="flex justify-around w-4/6 pb-20 flex-wrap"
-                    style={{ margin: "0 auto" }}
+                    style={{margin: "0 auto"}}
                 >
                     <ColumnThumbnail
                         name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
@@ -43,7 +43,7 @@ function Column() {
                 </div>
                 <div
                     className="flex justify-around w-4/6 pb-20 flex-wrap"
-                    style={{ margin: "0 auto" }}
+                    style={{margin: "0 auto"}}
                 >
                     <ColumnThumbnail
                         name="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…"
@@ -67,7 +67,7 @@ function Column() {
                     />
                 </div>
                 <div className="flex justify-center py-4">
-                    <LinearButton name="コラムをもっと見る" />
+                    <LinearButton name="コラムをもっと見る"/>
                 </div>
             </div>
         </Layout>
