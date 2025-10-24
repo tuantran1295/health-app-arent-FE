@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import GoToTop from "../components/GoToTop.tsx";
 
 function Layout(props: any) {
     return (
@@ -7,6 +8,7 @@ function Layout(props: any) {
             <Header />
             {props.children}
             <Footer />
+            <GoToTop />
         </div>
     );
 }
