@@ -2,6 +2,7 @@ import HexagonButton from "../components/HexagonButton.tsx";
 import LinearButton from "../components/LinearButton.tsx";
 import RecordCategory from "../components/RecordCategory.tsx";
 import ColumnThumbnail from "../components/ColumnThumbnail.tsx";
+import RecommendColumn from "../components/RecommendColumn.tsx";
 
 function TestComponent() {
     return (
@@ -51,6 +52,8 @@ function TestComponent() {
                     type="4"
                 />
             </div>
+            <br></br><br></br><br></br><br></br><br></br>
+            <RecommendColumn name="RECOMMENDED COLUMN" description="オススメ"/>
         </div>
     );
 }
