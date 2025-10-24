@@ -6,8 +6,12 @@ interface IProps {
 function FoodInfo(props: IProps) {
     const { title, url } = props
     return (
-        <div className='w-full relative h-full'>
-            <img src="https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/16:9/w_1280,c_limit/IMG%20Worlds%20of%20Adventure%20-%201.jpg" alt="food" />
+        <div className='w-full relative h-[241px]'>
+            <img className='w-full h-full object-cover' src={url} alt="food"/>
+            <span
+                className='w-[120px] h-[32px] bg-primary-300 absolute bottom-0 left-0 font-inter text-[15px] text-white flex justify-center items-center'>
+                {title}
+            </span>
         </div>
     )
 }

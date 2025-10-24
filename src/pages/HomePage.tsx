@@ -1,16 +1,32 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import FoodInfo from '../components/FoodInfo'
+import {categories, meal} from "../mock/foods.ts";
+import HexagonButton from "../components/HexagonButton.tsx";
+import LinearButton from "../components/LinearButton.tsx";
 
 function HomePage() {
-    const [meal, setMeal] = useState<string>('morning')
+    const [expand, setExpand] = useState<boolean>(false)
+    const [active, setActive] = useState<string>('all')
     return (
-        <>
-            <div className='font-noto'>日本語：Noto SansCJK JP</div>
-            <div className='grid grid-cols-4'>
-                <FoodInfo title='hi' url='hello'/>
-
+        <div>
+            <div className='flex mx-auto cursor-pointer items-center w-[700px] justify-between'>
+                {categories.map(e => (
+                    <HexagonButton onClick={() => setActive(e.name)} key={e.name} type={e.type} name={e.name}/>
+                ))}
+                <div className='w-[960px] mt-[50px] flex flex-col items-center mx-auto'>
+                    <div className='gap-[6px] grid grid-cols-4'>
+                        {meal.filter(el => active !== 'all' ? el.category == active : true).slice(0, expand ? meal.length : 8).map(e => (
+                            <FoodInfo title={e.title} url={e.url}/>
+                        ))}
+                    </div>
+                    {!expand && (
+                        <div onClick={() => setExpand(true)} className='mt-5 mx-auto'>
+                            <LinearButton name="記録をもっと見る"/>
+                        </div>
+                    )}
+                </div>
             </div>
-        </>
+        </div>
     )
 }
 
